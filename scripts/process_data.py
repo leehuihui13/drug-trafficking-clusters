@@ -188,7 +188,8 @@ data, drug_classes = import_data()
 explore_data(data)
 
 # Preprocessing data
-processed_data = preprocess_data(data, drug_classes, gmap_key='AIzaSyAIwF4vhz4Ib87sLJLmdp8gqIChaVZxYbw')
+api_key = input("Input API key")
+processed_data = preprocess_data(data, drug_classes, gmap_key=api_key)
 
 # Exporting processed data
 export_data(processed_data)
