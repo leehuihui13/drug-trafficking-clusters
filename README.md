@@ -21,9 +21,10 @@ The dataset is publicly available for download on the UNODC Data Portal at: http
 # Scripts
 The project includes the following scripts in the scripts folder:
 * `process_data.py`: Script for processing and cleaning raw data into a suitable format for analysis.
-* `eda.py`: Script for exploratory data analysis, providing insights into the characteristics of the dataset.
+* `create_dash.py`: Script that creates a Dash web application that visualizes drug trafficking activity clusters on a map.
 * `train_model.py`: Script for training machine learning models on the processed data.
-* `run.sh`: Bash script for executing the entire pipeline, from data preprocessing to model training.
+* `evaluate_model.py`: Script for evaluating machine learning models.
+* `run.sh`: Bash script for executing the entire pipeline, from data preprocessing to model evaluation.
 
 # Installation
 To run the scripts in this project, ensure you have Python 3 installed along with the necessary dependencies listed in requirements.txt. You can install the dependencies using the following command:
@@ -36,6 +37,9 @@ pip install -r requirements.txt
 2. Navigate to the project directory.
 3. Run the desired scripts from the scripts folder to process the data, perform exploratory data analysis, and train machine learning models.
 4. Execute `run.sh` to automate the entire pipeline.
+
+# Visualization
+The Dash web application that visualizes drug trafficking activity clusters on a map can be found on http://leehuihui13.pythonanywhere.com/. The application allows users to select specific years and drug classes to filter the data and update the map accordingly. 
 
 # References
 [1] Merrill Singer. “Drugs and development: the global impact of drug use and trafficking on social and economic development”. In: International journal of drug policy 19.6 (2008), pp. 467–478. DOI: https://doi.org/10.1016/j.drugpo.2006.12.007. \
