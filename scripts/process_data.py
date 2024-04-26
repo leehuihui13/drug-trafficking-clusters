@@ -168,7 +168,7 @@ def clean_and_encode_categorical(data):
     cat_columns = ["Drug class/ group", "Meansoftransportation", "Sitetypeoflocationofseizure"]
     onehotencoder = OneHotEncoder(sparse_output=False)
     X = onehotencoder.fit_transform(data[cat_columns])
-    one_hot_df = pd.DataFrame(X, columns=onehotencoder.get_feature_names_out(cat_columns))
+    one_hot_df = pd.DataFrame(X, columns=onehotencoder.get_feature_names_out(cat_columns)).astype(int)
     data = pd.concat([data, one_hot_df], axis=1)
 
     return data
@@ -181,16 +181,17 @@ def export_data(data):
     print("Processed data has been exported.")
 
 
-# Importing data
-data, drug_classes = import_data()
+if __name__ == '__main__':
+    # Importing data
+    data, drug_classes = import_data()
 
-# Exploring data
-explore_data(data)
+    # Exploring data
+    explore_data(data)
 
-# Preprocessing data
-api_key = input("Input API key")
-processed_data = preprocess_data(data, drug_classes, gmap_key=api_key)
+    # Preprocessing data
+    api_key = input("Input API key: ")
+    processed_data = preprocess_data(data, drug_classes, gmap_key=api_key)
 
-# Exporting processed data
-export_data(processed_data)
+    # Exporting processed data
+    export_data(processed_data)
 

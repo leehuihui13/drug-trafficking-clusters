@@ -22,8 +22,8 @@ The dataset is publicly available for download on the UNODC Data Portal at: http
 The project includes the following scripts in the scripts folder:
 * `process_data.py`: Script for processing and cleaning raw data into a suitable format for analysis.
 * `create_dash.py`: Script that creates a Dash web application that visualizes drug trafficking activity clusters on a map.
-* `train_model.py`: Script for training machine learning models on the processed data.
-* `evaluate_model.py`: Script for evaluating machine learning models.
+* `cluster_model.py`: Script for training clustering models on the processed data.
+* `regression_model.py`: Script for training regression models on the processed data.
 * `run.sh`: Bash script for executing the entire pipeline, from data preprocessing to model evaluation.
 
 # Installation
